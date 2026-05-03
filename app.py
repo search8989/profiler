@@ -22,7 +22,7 @@ login_manager.login_view = 'login'
 
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
-ADMIN_EMAIL = "a.v.maryniak@gmai.com"
+ADMIN_EMAIL = "a.v.maryniak@gmail.com"
 
 PRICES = {
     "fast": 99,
@@ -339,6 +339,10 @@ def dashboard():
 @app.route('/test')
 @login_required
 def test_page():
+    min_price = min(PRICES.values())
+    if current_user.balance < min_price:
+        flash(f'Недостатньо коштів для проведення тесту. Мінімум {min_price} грн. Поповніть баланс.', 'error')
+        return redirect(url_for('billing'))
     return render_template_string(TEST_HTML, positions=POSITIONS, questions_json=json.dumps(QUESTIONS_FALLBACK, ensure_ascii=False), prices=PRICES, balance=current_user.balance)
 
 @app.route('/history')
@@ -395,6 +399,9 @@ def generate_questions():
         data = request.json
         position = data.get('position', '')
         mode = data.get('mode', 'medium')
+        cost = PRICES.get(mode, 249)
+        if current_user.balance < cost:
+            return jsonify({"error": f"Недостатньо коштів. Потрібно {cost} грн, на балансі {current_user.balance} грн.", "insufficient_balance": True, "required": cost, "balance": current_user.balance}), 402
         count = {"fast": 7, "medium": 17, "deep": 34}.get(mode, 17)
         prompt = f"""Згенеруй рівно {count} питань для метапрограмного НЛП-інтерв'ю кандидата на посаду "{position}".
 
@@ -1112,6 +1119,15 @@ async function startQuiz(){
   const pos=document.getElementById("position_select").value.trim();
   if(!name){alert("Введіть імя");return}
   if(!pos){alert("Введіть посаду");return}
+  const PRICES_JS={fast: {{ prices.fast }}, medium: {{ prices.medium }}, deep: {{ prices.deep }}};
+  const cost=PRICES_JS[currentMode];
+  const bal={{ balance }};
+  if(bal<cost){
+    if(confirm("Недостатньо коштів. Потрібно "+cost+" грн, на балансі "+bal+" грн.\n\nПерейти на сторінку поповнення балансу?")){
+      window.location.href="/billing";
+    }
+    return;
+  }
   document.getElementById("setup").style.display="none";
   document.getElementById("loading").style.display="block";
   document.getElementById("loading").textContent="🤖 Готую питання адаптовані під «"+pos+"»...";
