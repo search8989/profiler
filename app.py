@@ -717,7 +717,7 @@ th{background:#f8f9fa;font-weight:bold}
 
 <div class="card">
 <h2 style="margin-bottom:10px">Як поповнити баланс</h2>
-<p style="line-height:1.6">Поки що поповнення працює вручну. Перекажіть кошти на реквізити нижче і напишіть нам в Telegram або Viber із вашим email — ми зарахуємо баланс протягом 1-2 годин.</p>
+<p style="line-height:1.6">1. Перекажіть кошти за вказаними нижче реквізитами.<br>2. Напишіть нам у Telegram або Viber, вказавши email вашого акаунта.<br>3. Зарахування відбувається протягом 1–2 годин. У разі затримки — зв'яжіться з нами повторно для перевірки.</p>
 <div style="background:#f8f9fa;padding:15px;border-radius:8px;margin-top:12px;font-family:monospace;font-size:13px">
 ФОП Мариняк Андрій Володимирович<br>
 ІПН: 3261605297<br>
