@@ -684,7 +684,7 @@ th{background:#f8f9fa;font-weight:bold}
 <div class="balance-card">
 <h2>Поточний баланс</h2>
 <div class="amount">{{ user.balance }} грн</div>
-<div style="margin-top:10px;font-size:13px">Ціни: Швидкий — {{ prices.fast }} грн · Середній — {{ prices.medium }} грн · Глибокий — {{ prices.deep }} грн</div>
+<div style="margin-top:10px;font-size:13px">Ціни: Базовий — {{ prices.fast }} грн · Розширений — {{ prices.medium }} грн · Повний — {{ prices.deep }} грн</div>
 </div>
 
 <div class="card">
@@ -704,7 +704,7 @@ th{background:#f8f9fa;font-weight:bold}
 <td>{{ t.created_at.strftime('%d.%m.%Y %H:%M') }}</td>
 <td>{{ t.candidate_name }}</td>
 <td>{{ t.position }}</td>
-<td><span class="tag tag-{{t.mode}}">{{ {'fast':'Швидкий','medium':'Середній','deep':'Глибокий'}[t.mode] }}</span></td>
+<td><span class="tag tag-{{t.mode}}">{{ {'fast':'Базовий','medium':'Розширений','deep':'Повний'}[t.mode] }}</span></td>
 <td>{{ t.cost }} грн</td>
 <td><a href="/test/{{ t.id }}" class="btn btn-blue" style="padding:5px 12px;font-size:12px">Звіт</a></td>
 </tr>
@@ -787,7 +787,7 @@ th{background:#f8f9fa;font-weight:bold}
 <td>{{ t.created_at.strftime('%d.%m.%Y %H:%M') }}</td>
 <td>{{ t.candidate_name }}</td>
 <td>{{ t.position }}</td>
-<td><span class="tag tag-{{t.mode}}">{{ {'fast':'Швидкий','medium':'Середній','deep':'Глибокий'}[t.mode] }}</span></td>
+<td><span class="tag tag-{{t.mode}}">{{ {'fast':'Базовий','medium':'Розширений','deep':'Повний'}[t.mode] }}</span></td>
 <td>{{ t.cost }} грн</td>
 <td><a href="/test/{{ t.id }}" class="btn btn-blue" style="padding:5px 12px;font-size:12px">Переглянути</a></td>
 </tr>
@@ -848,7 +848,7 @@ th{background:#f8f9fa;font-weight:bold}
 <div class="container">
 <div class="card">
 <h1 style="margin-bottom:5px">Звіт: {{ test.candidate_name }}</h1>
-<p style="color:#666">Посада: <strong>{{ test.position }}</strong> · Тип: <span class="tag tag-{{test.mode}}">{{ {'fast':'Швидкий','medium':'Середній','deep':'Глибокий'}[test.mode] }}</span> · Дата: {{ test.created_at.strftime('%d.%m.%Y %H:%M') }}</p>
+<p style="color:#666">Посада: <strong>{{ test.position }}</strong> · Тип: <span class="tag tag-{{test.mode}}">{{ {'fast':'Базовий','medium':'Розширений','deep':'Повний'}[test.mode] }}</span> · Дата: {{ test.created_at.strftime('%d.%m.%Y %H:%M') }}</p>
 <div style="margin-top:15px">
 <button class="btn btn-red" onclick="downloadPdf()">📕 Завантажити PDF</button>
 <button class="btn" onclick="copyResult()">📋 Копіювати</button>
@@ -1112,6 +1112,7 @@ th{background:#f8f9fa;font-weight:bold}
 </div>
 <div class="container">
 <div id="setup">
+<div id="resume_banner" class="card" style="display:none;background:#fff3cd;border-left:4px solid #ffc107"><div style="font-weight:bold;font-size:15px;color:#856404;margin-bottom:6px">↻ У вас є незавершений тест</div><div id="resume_info" style="font-size:13px;color:#856404;margin-bottom:10px"></div><button class="btn btn-green" onclick="resumeDraft()" style="margin-right:8px">Продовжити</button><button class="btn btn-red" onclick="discardDraft()">Почати заново</button></div>
 <div class="balance-card" style="padding:18px"><div style="display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:13px;opacity:0.9">Баланс</div><div style="font-size:24px;font-weight:bold">{{ balance }} грн</div></div><a href="/billing" style="color:white;font-size:13px;text-decoration:underline">Поповнити</a></div></div>
 
 <div class="card"><label>Імя кандидата:</label><input type="text" id="candidate_name" placeholder="Введіть імя..."></div>
@@ -1119,9 +1120,9 @@ th{background:#f8f9fa;font-weight:bold}
 <div class="card">
 <label>Формат тестування:</label>
 <div class="modes">
-<div class="mode-card" data-mode="fast" onclick="selectMode('fast')"><div class="mode-name">⚡ Швидкий</div><div class="mode-desc">16 питань<br>8 метапрограм</div><div class="mode-price">{{ prices.fast }} грн</div></div>
-<div class="mode-card selected" data-mode="medium" onclick="selectMode('medium')"><div class="mode-name">📊 Середній</div><div class="mode-desc">28 питань<br>14 метапрограм</div><div class="mode-price">{{ prices.medium }} грн</div></div>
-<div class="mode-card" data-mode="deep" onclick="selectMode('deep')"><div class="mode-name">🧠 Глибокий</div><div class="mode-desc">40 питань<br>20 метапрограм</div><div class="mode-price">{{ prices.deep }} грн</div></div>
+<div class="mode-card" data-mode="fast" onclick="selectMode('fast')"><div class="mode-name">⚡ Базовий</div><div class="mode-desc">16 питань<br>8 метапрограм</div><div class="mode-price">{{ prices.fast }} грн</div></div>
+<div class="mode-card selected" data-mode="medium" onclick="selectMode('medium')"><div class="mode-name">📊 Розширений</div><div class="mode-desc">28 питань<br>14 метапрограм</div><div class="mode-price">{{ prices.medium }} грн</div></div>
+<div class="mode-card" data-mode="deep" onclick="selectMode('deep')"><div class="mode-name">🧠 Повний</div><div class="mode-desc">40 питань<br>20 метапрограм</div><div class="mode-price">{{ prices.deep }} грн</div></div>
 </div>
 </div>
 <button class="btn btn-green" onclick="startQuiz()" style="width:100%;font-size:17px;padding:15px">▶ Розпочати тестування</button>
@@ -1140,6 +1141,60 @@ th{background:#f8f9fa;font-weight:bold}
 <script>
 const QUESTIONS = {{ questions_json|safe }};
 let DYNAMIC_QUESTIONS=null, current=0, answers=[], mediaRecorder=null, audioChunks=[], currentMode="medium";
+
+const DRAFT_KEY="metaprofile_draft_v1";
+const DRAFT_TTL_MS=7*24*60*60*1000;
+
+function saveDraft(){
+  try{
+    if(!DYNAMIC_QUESTIONS) return;
+    const name=document.getElementById("candidate_name")?.value||"";
+    const pos=document.getElementById("position_select")?.value||"";
+    const data={name, position:pos, mode:currentMode, questions:DYNAMIC_QUESTIONS, answers:answers, current:current, ts:Date.now()};
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(data));
+  }catch(e){}
+}
+function loadDraft(){
+  try{
+    const raw=localStorage.getItem(DRAFT_KEY); if(!raw) return null;
+    const d=JSON.parse(raw);
+    if(!d||!d.ts||Date.now()-d.ts>DRAFT_TTL_MS){ localStorage.removeItem(DRAFT_KEY); return null; }
+    if(!d.questions||!d.questions.length) return null;
+    return d;
+  }catch(e){ return null; }
+}
+function clearDraft(){ try{ localStorage.removeItem(DRAFT_KEY); }catch(e){} }
+
+function checkResumeBanner(){
+  const d=loadDraft(); if(!d) return;
+  const banner=document.getElementById("resume_banner");
+  const info=document.getElementById("resume_info");
+  if(!banner||!info) return;
+  const filled=(d.answers||[]).filter(a=>a&&a.trim().length>0).length;
+  const total=d.questions.length;
+  const date=new Date(d.ts).toLocaleString("uk-UA");
+  info.textContent="Кандидат: "+(d.name||"—")+" · Посада: "+(d.position||"—")+" · Прогрес: "+filled+" з "+total+" відповідей · Збережено: "+date;
+  banner.style.display="block";
+}
+function resumeDraft(){
+  const d=loadDraft(); if(!d) return;
+  document.getElementById("candidate_name").value=d.name||"";
+  document.getElementById("position_select").value=d.position||"";
+  currentMode=d.mode||"medium";
+  document.querySelectorAll('.mode-card').forEach(c=>c.classList.remove('selected'));
+  const mc=document.querySelector('.mode-card[data-mode="'+currentMode+'"]'); if(mc) mc.classList.add('selected');
+  DYNAMIC_QUESTIONS=d.questions;
+  answers=d.answers||new Array(DYNAMIC_QUESTIONS.length).fill("");
+  document.getElementById("setup").style.display="none";
+  document.getElementById("candidate_display").textContent=(d.name||"")+" — "+(d.position||"");
+  document.getElementById("quiz").style.display="block";
+  buildQuestions(DYNAMIC_QUESTIONS);
+  for(let i=0;i<answers.length;i++){ const el=document.getElementById("answer_"+i); if(el&&answers[i]) el.value=answers[i]; }
+  showQuestion(Math.min(d.current||0, DYNAMIC_QUESTIONS.length-1));
+}
+function discardDraft(){ clearDraft(); document.getElementById("resume_banner").style.display="none"; }
+
+window.addEventListener("DOMContentLoaded", checkResumeBanner);
 
 function selectMode(mode){currentMode=mode;document.querySelectorAll('.mode-card').forEach(c=>c.classList.remove('selected'));document.querySelector('.mode-card[data-mode="'+mode+'"]').classList.add('selected');}
 
@@ -1169,6 +1224,7 @@ async function startQuiz(){
   document.getElementById("loading").textContent="⏳ Аналізую відповіді... 20-40 секунд";
   const qs=DYNAMIC_QUESTIONS;
   answers=new Array(qs.length).fill("");
+  saveDraft();
   document.getElementById("candidate_display").textContent=name+" — "+pos;
   document.getElementById("quiz").style.display="block";
   buildQuestions(qs);showQuestion(0);
@@ -1177,11 +1233,11 @@ async function startQuiz(){
 function buildQuestions(qs){
   const c=document.getElementById("questions_container");c.innerHTML="";
   qs.forEach((q,i)=>{const d=document.createElement("div");d.className="question-block";d.id="q_"+i;
-    d.innerHTML='<div class="question-num">Питання '+(i+1)+' з '+qs.length+'</div><div class="question-text">'+q+'</div><textarea class="answer-area" id="answer_'+i+'" placeholder="Натисніть запис або введіть вручну..."></textarea><p class="hint">🎤 Говоріть голосно і повільно. Редагуйте якщо потрібно.</p><div class="btn-row"><button class="record-btn" id="rec_'+i+'" onclick="toggleRecord('+i+')">🎤 Записати</button></div>';
+    d.innerHTML='<div class="question-num">Питання '+(i+1)+' з '+qs.length+'</div><div class="question-text">'+q+'</div><textarea class="answer-area" id="answer_'+i+'" oninput="answers['+i+']=this.value;saveDraft()" placeholder="Натисніть запис або введіть вручну..."></textarea><p class="hint">🎤 Говоріть голосно і повільно. Редагуйте якщо потрібно.</p><div class="btn-row"><button class="record-btn" id="rec_'+i+'" onclick="toggleRecord('+i+')">🎤 Записати</button></div>';
     c.appendChild(d);});
 }
 
-function showQuestion(idx){const qs=DYNAMIC_QUESTIONS||QUESTIONS[currentMode];document.querySelectorAll(".question-block").forEach(b=>b.classList.remove("active"));document.getElementById("q_"+idx).classList.add("active");document.getElementById("progress_text").textContent="Питання "+(idx+1)+" з "+qs.length;document.getElementById("progress_bar").style.width=((idx+1)/qs.length*100)+"%";document.getElementById("prev_btn").disabled=idx===0;document.getElementById("next_btn").style.display=idx===qs.length-1?"none":"inline-block";document.getElementById("analyze_btn").style.display=idx===qs.length-1?"block":"none";current=idx;}
+function showQuestion(idx){const qs=DYNAMIC_QUESTIONS||QUESTIONS[currentMode];document.querySelectorAll(".question-block").forEach(b=>b.classList.remove("active"));document.getElementById("q_"+idx).classList.add("active");document.getElementById("progress_text").textContent="Питання "+(idx+1)+" з "+qs.length;document.getElementById("progress_bar").style.width=((idx+1)/qs.length*100)+"%";document.getElementById("prev_btn").disabled=idx===0;document.getElementById("next_btn").style.display=idx===qs.length-1?"none":"inline-block";document.getElementById("analyze_btn").style.display=idx===qs.length-1?"block":"none";current=idx;saveDraft();}
 function nextQuestion(){const qs=DYNAMIC_QUESTIONS||QUESTIONS[currentMode];if(current<qs.length-1)showQuestion(current+1)}
 function prevQuestion(){if(current>0)showQuestion(current-1)}
 
@@ -1191,7 +1247,7 @@ async function toggleRecord(idx){const btn=document.getElementById("rec_"+idx);
     mediaRecorder.ondataavailable=e=>audioChunks.push(e.data);
     mediaRecorder.onstop=async()=>{stream.getTracks().forEach(t=>t.stop());const blob=new Blob(audioChunks,{type:"audio/webm"});const fd=new FormData();fd.append("audio",blob,"r.webm");
       try{const r=await fetch("/transcribe",{method:"POST",body:fd});const d=await r.json();
-        if(d.text&&d.text.trim().length>0){document.getElementById("answer_"+idx).value=d.text;answers[idx]=d.text;btn.textContent="✓ Записано (натисніть для перезапису)";btn.className="record-btn done";}
+        if(d.text&&d.text.trim().length>0){document.getElementById("answer_"+idx).value=d.text;answers[idx]=d.text;saveDraft();btn.textContent="✓ Записано (натисніть для перезапису)";btn.className="record-btn done";}
         else{btn.textContent="🎤 Записати";btn.className="record-btn";alert("Не вдалось розпізнати: "+(d.error||""))}
       }catch(e){btn.textContent="🎤 Записати";btn.className="record-btn";alert("Помилка: "+e.message)}};
     mediaRecorder.start();btn.textContent="⏹ Зупинити";btn.className="record-btn recording";
@@ -1208,7 +1264,7 @@ async function doAnalyze(){
     const d=await r.json();
     document.getElementById("loading").style.display="none";
     if(d.error){document.getElementById("result").style.display="block";document.getElementById("result").innerHTML="<strong style='color:#e74c3c'>Помилка:</strong> "+d.error+(d.error.includes("Недостатньо")?'<br><br><a href=\"/billing\" class=\"btn btn-green\">Поповнити баланс</a>':'');return;}
-    if(d.test_id){window.location.href="/test/"+d.test_id;}
+    if(d.test_id){clearDraft();window.location.href="/test/"+d.test_id;}
   }catch(e){document.getElementById("loading").style.display="none";document.getElementById("result").style.display="block";document.getElementById("result").textContent="Помилка: "+e.message;}
 }
 </script>
