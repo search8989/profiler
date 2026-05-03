@@ -281,6 +281,9 @@ input,select,textarea{width:100%;padding:12px;border:2px solid #ddd;border-radiu
 <button class="start-btn" onclick="startQuiz()">▶ Розпочати тестування</button>
 </div>
 <div id="quiz">
+<div class="card" style="background:#fff8e1;border-left:4px solid #f39c12">
+<div style="font-size:14px;color:#7d4f00;line-height:1.5"><strong>📢 Інструкція:</strong> говоріть <strong>голосно і повільно</strong>. Після запису перевірте текст і відредагуйте якщо бачите помилки розпізнавання.</div>
+</div>
 <div class="card">
 <div style="display:flex;justify-content:space-between;align-items:center">
 <span id="progress_text" style="color:#888"></span>
@@ -335,7 +338,7 @@ function buildQuestions(qs){
     d.innerHTML='<div class="question-num">Питання '+(i+1)+' з '+qs.length+'</div>'+
       '<div class="question-text">'+q+'</div>'+
       '<textarea class="answer-area" id="answer_'+i+'" placeholder="Натисніть кнопку запису або введіть вручну..."></textarea>'+
-      '<p class="hint">✏ Текст можна редагувати після запису</p>'+
+      '<p class="hint" style="color:#e67e22;font-size:13px;font-weight:bold;margin-bottom:8px">🎤 Говоріть голосно і повільно. Редагуйте відповіді якщо бачите помилки розпізнавання.</p>'+
       '<div class="btn-row">'+
         '<button class="record-btn" id="rec_'+i+'" onclick="toggleRecord('+i+')">🎤 Записати</button>'+
       '</div>';
