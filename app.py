@@ -6,6 +6,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from openai import OpenAI
 from datetime import datetime
 import json, tempfile, os, secrets
+from seo import LANDING_HTML, register_seo_routes
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', secrets.token_hex(32))
@@ -357,7 +358,7 @@ def logout():
 def index():
     if current_user.is_authenticated:
         return redirect(url_for('dashboard'))
-    return redirect(url_for('login'))
+    return render_template_string(LANDING_HTML)
 
 @app.route('/dashboard')
 @login_required
@@ -1269,6 +1270,8 @@ async function doAnalyze(){
 }
 </script>
 </body></html>"""
+
+register_seo_routes(app)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
