@@ -1207,7 +1207,7 @@ async function startQuiz(){
   const cost=PRICES_JS[currentMode];
   const bal={{ balance }};
   if(bal<cost){
-    if(confirm("Недостатньо коштів. Потрібно "+cost+" грн, на балансі "+bal+" грн.\n\nПерейти на сторінку поповнення балансу?")){
+    if(confirm("Недостатньо коштів. Потрібно "+cost+" грн, на балансі "+bal+" грн.\\n\\nПерейти на сторінку поповнення балансу?")){
       window.location.href="/billing";
     }
     return;
