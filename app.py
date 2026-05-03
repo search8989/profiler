@@ -1,3 +1,4 @@
+# v2.1
 from flask import Flask, request, jsonify, render_template_string, redirect, url_for, session, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
