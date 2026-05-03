@@ -283,7 +283,7 @@ SAMPLE_REPORT_HTML = r"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <title>Приклад звіту — МetaProfile</title>
-<meta name="description" content="Так виглядає реальний ZVіт після тестування">
+<meta name="description" content="Так виглядає реальний звіт після тестування">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://www.metaprofile.online/sample-report">
@@ -313,45 +313,145 @@ h1{font-size:30px;margin:0 0 6px;color:#111}
 .cta-final p{margin:0 0 18px;font-size:15px;opacity:.85}
 .cta-final .btn{display:inline-block;padding:13px 30px;background:#fff;color:#111;text-decoration:none;border-radius:10px;font-weight:600}
 @media (max-width:640px){h1{font-size:24px}.section{padding:18px 18px}}
+
+.score-row{display:flex;align-items:center;gap:12px;margin:6px 0 14px}
+.score-bar{flex:1;height:10px;background:#eee;border-radius:6px;overflow:hidden}
+.score-fill{height:100%;background:linear-gradient(90deg,#4a6cf7,#7a8cff);border-radius:6px}
+.score-label{font-size:13px;color:#555;min-width:120px}
+.score-value{font-size:13px;color:#111;font-weight:600;min-width:40px;text-align:right}
+.quote{margin:10px 0;padding:10px 14px;background:#f7f5ee;border-left:3px solid #c9b87a;border-radius:6px;font-style:italic;color:#5a4a1a;font-size:14px}
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px}
+.tag{background:#eef3ff;color:#1a3a8f;padding:4px 10px;border-radius:14px;font-size:12px;font-weight:500}
+.fit{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#1a3a8f,#4a6cf7);color:#fff;padding:18px 22px;border-radius:12px;margin:18px 0}
+.fit-num{font-size:42px;font-weight:800;line-height:1}
+.fit-text strong{display:block;font-size:16px;margin-bottom:4px}
+.fit-text span{font-size:13px;opacity:.9}
+.section h3.sub{margin:14px 0 6px;font-size:15px;color:#111}
+.warn{background:#fff5f0;border-left:3px solid #e57373;padding:10px 14px;border-radius:6px;font-size:14px;color:#7a3a1a;margin:8px 0}
 </style>
 </head>
 <body>
 <header class="top"><div class="row"><a class="logo" href="/">MetaProfile</a><a class="back" href="/">← На головну</a></div></header>
-<div class="demo-banner">📋 Так виглядає реальний ZVіт після тестування</div>
+<div class="demo-banner">📋 Так виглядає реальний звіт після тестування</div>
 <main class="report">
-<h1>Приклад ZVіту</h1>
+<h1>Приклад звіту</h1>
 <p class="lead">Це демо-звіт на основі вигаданого кандидата. Реальні звіти мають таку ж структуру і глибину аналізу.</p>
 <div class="meta-card">
 <div class="item"><div class="lbl">Кандидат</div><div class="val">Олена К.</div></div>
 <div class="item"><div class="lbl">Позиція</div><div class="val">Менеджер з продажу</div></div>
 <div class="item"><div class="lbl">Дата тестування</div><div class="val">15.04.2026</div></div>
-<div class="item"><div class="lbl">Тривалість</div><div class="val">13 хвилин</div></div>
+<div class="item"><div class="lbl">Формат</div><div class="val">Розширений</div></div>
 </div>
+
+<div class="fit">
+<div class="fit-num">78<span style="font-size:20px;opacity:.8">/100</span></div>
+<div class="fit-text"><strong>Загальна відповідність позиції</strong><span>Кандидатка добре підходить для ролі менеджера з продажу з помірними застереженнями щодо стресостійкості.</span></div>
+</div>
+<div class="tag-row">
+<span class="tag">Швидке прийняття рішень</span>
+<span class="tag">Орієнтація на результат</span>
+<span class="tag">Потреба в структурі</span>
+<span class="tag">Чутлива до визнання</span>
+<span class="tag">Середня стресостійкість</span>
+</div>
+
 <section class="section"><h2><span class="num">1</span>Як приймає рішення</h2>
-<p>Олена приймає рішення швидко та інтуітивно. Схильна довіряти власному досвіду більше, ніж чужій думці. Це допомагає в динамічних ситуаціях, але може створювати тісні точки у командній роботі.</p>
-<div class="rec-box">Рекомендація: не тисніть довгим аналізом. Дайте контекст і очікуйте рішення протягом 1–2 годин.</div></section>
+<p>Олена приймає рішення швидко та інтуїтивно, спираючись на власний досвід більше, ніж на формальний аналіз. Це допомагає в динамічних комерційних ситуаціях, але може створювати слабкі місця в командній роботі, де потрібне обгрунтування вибору.</p>
+<div class="score-row"><div class="score-label">Швидкість</div><div class="score-bar"><div class="score-fill" style="width:85%"></div></div><div class="score-value">85%</div></div>
+<div class="score-row"><div class="score-label">Аналітичність</div><div class="score-bar"><div class="score-fill" style="width:42%"></div></div><div class="score-value">42%</div></div>
+<div class="score-row"><div class="score-label">Опора на дані</div><div class="score-bar"><div class="score-fill" style="width:38%"></div></div><div class="score-value">38%</div></div>
+<div class="score-row"><div class="score-label">Готовність делегувати</div><div class="score-bar"><div class="score-fill" style="width:55%"></div></div><div class="score-value">55%</div></div>
+<div class="quote">«Я зазвичай відразу бачу, як людина буде реагувати. Не люблю довгих обговорень — краще попробувати і скоригувати» — відповідь кандидатки на відкрите запитання.</div>
+<div class="rec-box"><strong>Рекомендація:</strong> не тисніть довгим аналізом і багатоповерховими викладами. Дайте короткий контекст і очікуйте рішення протягом 1–2 годин. Для важливих рішень додавайте чеклист критеріїв — це компенсує низьку схильність до формального аналізу.</div>
+</section>
+
 <section class="section"><h2><span class="num">2</span>Що мотивує</h2>
-<p>Головні драйвери: визнання результатів, стабільність та чіткі правила гри. Гроши важливі, але не є головним драйвером. Конкуренція через агресію не мотивує — очікує справедливості.</p>
-<div class="rec-box">Рекомендація: покажіть чіткий кар’єрний трек і преміальні KPI. Уникати грошових провокацій на інтерв’ю.</div></section>
-<section class="section"><h2><span class="num">3</span>Як з нею працювати</h2>
+<p>Головні драйвери Олени — визнання результатів, стабільність та чіткі правила гри. Гроші важливі, але не є єдиним драйвером — вони працюють як гігієнічний фактор. Конкуренція через агресію ризикує демотивувати — кандидатка очікує справедливих правил і прозорої системи премій.</p>
+<h3 class="sub">Мапа мотиваційних пріоритетів</h3>
+<div class="score-row"><div class="score-label">Визнання / статус</div><div class="score-bar"><div class="score-fill" style="width:88%"></div></div><div class="score-value">88%</div></div>
+<div class="score-row"><div class="score-label">Стабільність</div><div class="score-bar"><div class="score-fill" style="width:74%"></div></div><div class="score-value">74%</div></div>
+<div class="score-row"><div class="score-label">Кар’єрний ріст</div><div class="score-bar"><div class="score-fill" style="width:62%"></div></div><div class="score-value">62%</div></div>
+<div class="score-row"><div class="score-label">Приналежність до команди</div><div class="score-bar"><div class="score-fill" style="width:55%"></div></div><div class="score-value">55%</div></div>
+<div class="score-row"><div class="score-label">Грошова винагорода</div><div class="score-bar"><div class="score-fill" style="width:48%"></div></div><div class="score-value">48%</div></div>
+<div class="score-row"><div class="score-label">Автономія</div><div class="score-bar"><div class="score-fill" style="width:30%"></div></div><div class="score-value">30%</div></div>
+<div class="rec-box"><strong>Рекомендація:</strong> покажіть чіткий кар’єрний трек і прозорі KPI з преміями. Уникайте грошових провокацій на інтерв’ю («а якщо ми дамо на 30% менше») — це знижує довіру. Публічне визнання на зустрічах команди розблокує додаткову мотивацію.</div>
+</section>
+
+<section class="section"><h2><span class="num">3</span>Стиль роботи в команді</h2>
+<p>Олена комфортніше почуває себе в малих командах (3–6 осіб) із чіткими ролями. Схильна брати на себе відповідальність за свою ділянку, але неохоче лізе в «чужі» зони. Наради без чіткої повістки сприймає як витрату часу.</p>
+<h3 class="sub">Комунікація</h3>
 <ul>
-<li>Ставте чіткі та вимірні цілі і дедлайни</li>
-<li>Давайте ініціативу в межах процесу, але не повну свободу</li>
-<li>Регулярно давайте зворотний зв’язок — інакше втратить мотивацію</li>
-<li>В конфліктних ситуаціях дайте час на обдумування</li>
+<li>Пряма, лаконічна. Не любить довгих листів без конкретникив.</li>
+<li>Відповідає швидко в месенджерах, довше в електронній пошті.</li>
+<li>Не боїться відкрито озвучити незгоду, але очікує взаємної поваги.</li>
+</ul>
+<h3 class="sub">Роль у взаємодії</h3>
+<p>Частіше бере роль «виконавця-драйвера»: рухає процес до результату. Не претендує на лідерство в колективі, але очікує, що її експертизу будуть враховувати при прийнятті рішень.</p>
+</section>
+
+<section class="section"><h2><span class="num">4</span>Як з нею працювати</h2>
+<ul>
+<li><strong>Ставте вимірні цілі та дедлайни.</strong> Чим конкретніший результат — тим вища є включеність. Розмиті формулювання («попрацюй над якістю») будуть ігноруватися.</li>
+<li><strong>Давайте ініціативу в межах процесу.</strong> Повна свобода без рамок викликає тривогу. Оптимально: 70% процесу фіксований, 30% — для власних рішень.</li>
+<li><strong>Регулярний фідбек (1 раз на 2 тижні).</strong> Без підтвердження результатів поступово втрачає єнергію.</li>
+<li><strong>У конфліктах — пауза.</strong> Не втягуйте в емоційну дискусію. Дайте 24 години на обдумування — повертається з конструктивними рішеннями.</li>
+<li><strong>Делегування «вверх».</strong> Охоче бере на себе операційні завдання, гірше — стратегічні без контексту.</li>
 </ul>
 </section>
-<section class="section"><h2><span class="num">4</span>Потенційні ризики</h2>
+
+<section class="section"><h2><span class="num">5</span>Потенційні ризики</h2>
+<p>Нижче — сценарії, в яких сильні сторони Олени можуть працювати проти неї. Це не діагноз, а зони підвищеної уваги.</p>
+<div class="warn"><strong>Вигорання при частій зміні пріоритетів.</strong> Якщо компанія регулярно змінює квартальні цілі без пояснень — втратить включеність протягом 2–3 місяців.</div>
+<div class="warn"><strong>Перфекціонізм у простих задачах.</strong> Може надто довго допрацьовувати дрібниці замість того, щоб рухатися далі.</div>
+<div class="warn"><strong>Реакція на публічну критику.</strong> Жорсткий фідбек при колегах знижує лояльність довше, ніж у середнього працівника. Краще виносити критику в форматі 1-на-1.</div>
+<div class="warn"><strong>Опір процесам «зверху».</strong> Нові регламенти без пояснення вигод будуть виконуватися формально.</div>
+</section>
+
+<section class="section"><h2><span class="num">6</span>Як давати зворотний зв’язок</h2>
+<p>Олена добре сприймає критику, якщо вона конкретна і супроводжується рекомендаціями. Уникайте загальних оцінок («ти розумний співробітник», «ти над цим не допрацювала») — вони восприймаються як фальшиві або суб’єктивні.</p>
+<h3 class="sub">Шаблон фідбеку</h3>
 <ul>
-<li>Може вигорати при частій зміні пріоритетів</li>
-<li>Схильна до надмірного аналізу перед дією</li>
-<li>Стресове навантаження при жорсткій критиці</li>
+<li><strong>Факт:</strong> що саме відбулося (без інтерпретації).</li>
+<li><strong>Вплив:</strong> до чого це призвело для команди або результату.</li>
+<li><strong>Очікування:</strong> як би ви хотіли, щоб вона діяла в наступний раз.</li>
+<li><strong>Підтримка:</strong> який ресурс компанія дає для змін.</li>
+</ul>
+<p>Формат 1-на-1, без свідків, ранок або рання перша половина дня. Під кінець тижня реакції на важливий фідбек будуть різкішими.</p>
+</section>
+
+<section class="section"><h2><span class="num">7</span>Перші 90 днів: як ввести в роль</h2>
+<h3 class="sub">Тижні 1–2</h3>
+<ul>
+<li>Чітко описати зону відповідальності та ключових стейкхолдерів.</li>
+<li>Познайомити з продуктовою базою та дати доступ до CRM без «перевірки лояльності».</li>
+<li>Призначити ментора з досвідом 2+ роки в компанії.</li>
+</ul>
+<h3 class="sub">Місяць 2</h3>
+<ul>
+<li>Дати перший самостійний проект з вимірним результатом (напр. «відпрацювати 30 лідів з визначеної бази»).</li>
+<li>Визначити перший «quick win» для публічного визнання на командній зустрічі.</li>
+<li>Провести калібрувальний фідбек-сесію (45 хв) про сильні сторони та зони росту.</li>
+</ul>
+<h3 class="sub">Місяць 3</h3>
+<ul>
+<li>Перевести на повний KPI-план з премією.</li>
+<li>Зафіксувати «карту росту» на 6–12 місяців (зрозумілі критерії просування).</li>
+<li>Обговорити «червоні прапорці» прямо: що вас може справді демотивувати.</li>
 </ul>
 </section>
-<section class="section"><h2><span class="num">5</span>Як давати зворотний зв’язок</h2>
-<p>Конструктивно, з конкретними прикладами. Олена хороше сприймає критику, якщо вона супроводжується конкретною рекомендацією. Уникайте загальних оцінок на кшталт „ти розумній“.</p>
+
+<section class="section"><h2><span class="num">8</span>Короткий підсумок</h2>
+<p><strong>Сильні сторони:</strong> швидкість рішень, орієнтація на результат, відповідальність за свою ділянку, пряма комунікація.</p>
+<p><strong>Зони уваги:</strong> потреба в структурі та визнанні, середня стресостійкість при жорсткій публічній критиці, опір «процесам зверху» без пояснень.</p>
+<p><strong>Рекомендація:</strong> підходить для позиції з чіткими KPI та прозорою кар’єрною драбиною. Перед офером — фінальне інтерв’ю з керівником відділу.</p>
 </section>
-<div class="cta-final"><h3>Протестуйте на собі чи кандидаті</h3><p>Перший тест — безкоштовно. Отримаєте такий ж звіт за 15 хвилин.</p><a class="btn" href="/register">Створити акаунт безкоштовно</a></div>
+
+<section class="section" style="background:#fffbe6;border-color:#f3e1a8">
+<h2 style="color:#7a5a00"><span class="num" style="background:#c9a227">i</span>Важливо</h2>
+<p style="color:#5a4a1a;font-size:14px">Цей звіт — допоміжний інструмент для HR та керівників, а не психологічний діагноз. Рішення про найм має завжди включати інтерв’ю, перевірку досвіду та рекомендації. Результати можуть змінюватися залежно від контексту та життєвої ситуації кандидата.</p>
+</section>
+
+<div class="cta-final"><h3>Протестуйте на собі чи кандидаті</h3><p>Перший тест — безкоштовно. Отримаєте такий самий звіт по вашому кандидату.</p><a class="btn" href="/register">Створити акаунт безкоштовно</a></div>
 </main>
 </body>
 </html>"""
