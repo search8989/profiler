@@ -1066,9 +1066,9 @@ th{background:#f8f9fa;font-weight:bold}
 <div class="card">
 <label>Формат тестування:</label>
 <div class="modes">
-<div class="mode-card" data-mode="fast" onclick="selectMode('fast')"><div class="mode-name">⚡ Швидкий</div><div class="mode-desc">7 питань · ~5 хв<br>6 метапрограм</div><div class="mode-price">{{ prices.fast }} грн</div></div>
-<div class="mode-card selected" data-mode="medium" onclick="selectMode('medium')"><div class="mode-name">📊 Середній</div><div class="mode-desc">17 питань · ~15 хв<br>12 метапрограм</div><div class="mode-price">{{ prices.medium }} грн</div></div>
-<div class="mode-card" data-mode="deep" onclick="selectMode('deep')"><div class="mode-name">🧠 Глибокий</div><div class="mode-desc">34 питання · ~30 хв<br>17 метапрограм</div><div class="mode-price">{{ prices.deep }} грн</div></div>
+<div class="mode-card" data-mode="fast" onclick="selectMode('fast')"><div class="mode-name">⚡ Швидкий</div><div class="mode-desc">7 питань<br>6 метапрограм</div><div class="mode-price">{{ prices.fast }} грн</div></div>
+<div class="mode-card selected" data-mode="medium" onclick="selectMode('medium')"><div class="mode-name">📊 Середній</div><div class="mode-desc">17 питань<br>12 метапрограм</div><div class="mode-price">{{ prices.medium }} грн</div></div>
+<div class="mode-card" data-mode="deep" onclick="selectMode('deep')"><div class="mode-name">🧠 Глибокий</div><div class="mode-desc">34 питання<br>17 метапрограм</div><div class="mode-price">{{ prices.deep }} грн</div></div>
 </div>
 </div>
 <button class="btn btn-green" onclick="startQuiz()" style="width:100%;font-size:17px;padding:15px">▶ Розпочати тестування</button>
