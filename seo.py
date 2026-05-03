@@ -70,6 +70,28 @@ footer a{color:#fff;text-decoration:none}
 .article-promo .btn:hover{background:#000;transform:translateY(-1px)}
 @media (max-width:640px){.article-promo{padding:36px 0}.article-promo .promo-card{padding:26px 20px}.article-promo h2{font-size:20px}}
 
+#report-what{padding:60px 0;background:#fafaf7}
+#report-what h2{text-align:center;margin:0 0 8px}
+#report-what .section-sub{text-align:center;font-size:16px;color:#555;margin:0 auto 32px;max-width:640px}
+.report-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:1080px;margin:0 auto}
+.report-card{background:#fff;border:1px solid #e8e4d8;border-radius:14px;padding:24px 22px;transition:transform .15s,box-shadow .2s}
+.report-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.report-card .rc-icon{font-size:28px;margin-bottom:10px;line-height:1}
+.report-card h3{margin:0 0 8px;font-size:17px;color:#111;font-weight:600;line-height:1.3}
+.report-card p{margin:0;font-size:14px;color:#555;line-height:1.55}
+.report-cta{text-align:center;margin-top:30px}
+.btn-ghost{display:inline-block;padding:12px 26px;background:transparent;color:#111;border:1.5px solid #111;border-radius:10px;text-decoration:none;font-weight:600;transition:all .2s}
+.btn-ghost:hover{background:#111;color:#fff}
+.disclaimer-section{padding:30px 0 0;background:#fff}
+.disclaimer-card{max-width:760px;margin:0 auto;display:flex;gap:16px;align-items:flex-start;padding:18px 22px;background:#f4f6fb;border-left:3px solid #4a6cf7;border-radius:8px}
+.disclaimer-card .disc-icon{font-size:20px;line-height:1;flex-shrink:0;margin-top:2px}
+.disclaimer-card p{margin:0;font-size:14px;color:#3a4456;line-height:1.6}
+@media (max-width:640px){#report-what{padding:40px 0}.report-grid{grid-template-columns:1fr}}
+
+.card.popular{position:relative;border:2px solid #4a6cf7;transform:scale(1.03)}
+.card.popular .popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#4a6cf7;color:#fff;padding:4px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+@media (max-width:760px){.card.popular{transform:none}}
+
 </style>
 </head>
 <body>
@@ -85,18 +107,32 @@ footer a{color:#fff;text-decoration:none}
 </nav>
 </div></header>
 <section class="hero"><div class="container">
-<h1>Психологічний профіль кандидата<br>онлайн за 15 хвилин</h1>
-<p class="lead">MetaProfile — AI-платформа для психологічного тестування кандидатів та оцінки персоналу. Обʼєктивний звіт про сильні сторони, мотивацію та ризики — без багатогодинних співбесід.</p>
+<h1>Зрозумійте, як працювати<br>з кандидатом — ще до найму</h1>
+<p class="lead">Структурований звіт на основі відповідей кандидата: як він приймає рішення, що його мотивує, як давати задачі і де можуть бути ризики.</p>
 <a href="/register" class="btn">Створити акаунт безкоштовно</a>
 <a href="#how" class="btn secondary">Як це працює</a>
+<p class="hero-extra-link"><a href="/sample-report">Подивитись приклад звіту →</a></p>
 <p class="hero-extra-link"><a href="/about-method">Не впевнені? Прочитайте за 5 хвилин чому це працює →</a></p>
 <p class="free-badge" style="margin-top:18px;color:#666;font-size:0.95em">🎁 Перший тест — безкоштовно. Реєстрація — лише email.</p>
+</div></section>
+
+<section id="report-what"><div class="container">
+<h2>Що ви отримаєте у звіті</h2>
+<p class="section-sub">Не „тест з оцінкою“, а практичні підказки для роботи з людиною.</p>
+<div class="report-grid">
+<div class="report-card"><div class="rc-icon">🧭</div><h3>Як людина приймає рішення</h3><p>Швидко чи обережно. Самостійно чи чекає підтвердження. Як реагує на тиск і дедлайни.</p></div>
+<div class="report-card"><div class="rc-icon">⚡</div><h3>Що її мотивує</h3><p>Гроші, визнання, стабільність чи нові виклики. Шо триматиме на итривалому горизонті.</p></div>
+<div class="report-card"><div class="rc-icon">💬</div><h3>Як з нею працювати</h3><p>Стиль комунікації, формат задач, тип контролю. Як говорити зокрема з цією людиною.</p></div>
+<div class="report-card"><div class="rc-icon">⚠️</div><h3>Потенційні ризики</h3><p>Де може бути розчарування. Що варто перевірити на співбесіді чи в іспитному терміні.</p></div>
+<div class="report-card"><div class="rc-icon">🔄</div><h3>Як давати зворотний зв’язок</h3><p>Як хвалити і як критикувати, щоби людина почула — і хотіла змінюватись.</p></div>
+</div>
+<div class="report-cta"><a href="/sample-report" class="btn-ghost">Подивитись приклад звіту</a></div>
 </div></section>
 <section id="why"><div class="container">
 <h2>Чому HR обирають MetaProfile</h2>
 <div class="grid">
 <div class="card"><h3>Економія часу</h3><p>Замість 2-годинної співбесіди з психологом — структурований AI-звіт за 15 хвилин. Працює 24/7 без черг.</p></div>
-<div class="card"><h3>Обʼєктивність</h3><p>AI аналізує відповіді без упередженості, симпатій чи втоми. Результат однаковий для всіх кандидатів.</p></div>
+<div class="card"><h3>Обʼєктивність</h3><p>AI обробляє відповіді за єдиним алгоритмом — без впливу настрою, симпатій чи втоми. Кожен кандидат отримує одну й ту ж шкалу оцінки.</p></div>
 <div class="card"><h3>Доступна ціна</h3><p>Перший тест — у подарунок. Далі від 99 грн за тест замість тисяч гривень за консультацію психолога.</p></div>
 <div class="card"><h3>Готовий звіт</h3><p>Професійний звіт із сильними сторонами, ризиками та рекомендаціями. Можна додати до досьє кандидата.</p></div>
 <div class="card"><h3>Зменшення помилок найму</h3><p>За дослідженнями, помилка найму коштує бізнесу значних сум. Обʼєктивний скринінг суттєво знижує цей ризик.</p></div>
@@ -116,7 +152,7 @@ footer a{color:#fff;text-decoration:none}
 <h2>Сценарії використання</h2>
 <p style="text-align:center;color:#666;max-width:720px;margin:0 auto 24px">Як HR-менеджери, власники бізнесу та психологи використовують MetaProfile у щоденній роботі.</p>
 <div class="grid">
-<div class="card"><h3>🛍️ Підбір менеджера з продажу</h3><p>Власник магазину перевіряє 5 кандидатів за вечір замість тижня співбесід. Отримує обʼєктивний профіль: стресостійкість, мотивація, схильність до маніпуляцій — і обирає того, хто реально витримає роботу з клієнтами.</p></div>
+<div class="card"><h3>🛍️ Підбір менеджера з продажу</h3><p>Власник магазину перевіряє 5 кандидатів за вечір замість тижня співбесід. Отримує обʼєктивний профіль: стресостійкість, мотивація, схильність до маніпуляцій — і бачить потенційні ризики ще до фінального рішення.</p></div>
 <div class="card"><h3>👥 Перевірка команди перед реструктуризацією</h3><p>HR-директор IT-компанії оцінює 30 співробітників перед обʼєднанням відділів. Бачить, хто здатний бути лідером, а хто краще працює виконавцем — рішення про ролі базуються на даних, а не на інтуїції.</p></div>
 <div class="card"><h3>🧠 Скринінг ризику вигорання</h3><p>Психолог-консультант використовує MetaProfile для попередньої діагностики клієнтів. За 15 хвилин отримує гіпотези про сильні сторони та зони ризику — і готується до сесії якісніше, заощаджуючи перші 1-2 зустрічі.</p></div>
 </div>
@@ -125,7 +161,14 @@ footer a{color:#fff;text-decoration:none}
 <div class="grid">
 <div class="card"><h3 style="font-size:2em;color:#2563eb">−40%</h3><p><strong>часу на найм</strong> при використанні онлайн-оцінки кандидатів замість класичних співбесід <span style="color:#999">(Aberdeen Group, дослідження HR-індустрії)</span>.</p></div>
 <div class="card"><h3 style="font-size:2em;color:#2563eb">+24%</h3><p><strong>якість найму</strong> зростає, коли рішення базується на структурованій оцінці, а не на враженні рекрутера <span style="color:#999">(Harvard Business Review, мета-аналіз)</span>.</p></div>
-<div class="card"><h3 style="font-size:2em;color:#2563eb">−30%</h3><p><strong>плинність кадрів</strong> у компаній, що використовують психометричну оцінку перед наймом <span style="color:#999">(SHRM, галузеві звіти)</span>.</p></div>
+<div class="card popular"><div class="popular-badge">Найпопулярніше</div><h3 style="font-size:2em;color:#2563eb">−30%</h3><p><strong>плинність кадрів</strong> у компаній, що використовують психометричну оцінку перед наймом <span style="color:#999">(SHRM, галузеві звіти)</span>.</p></div>
+</div>
+</div></section>
+
+<section class="disclaimer-section"><div class="container">
+<div class="disclaimer-card">
+<div class="disc-icon">ℹ️</div>
+<p>MetaProfile не ставить діагнози і не замінює співбесіди. Це інструмент, який допомагає краще підготуватись до розмови, побачити ризики і адаптувати управління.</p>
 </div>
 </div></section>
 <section id="prices"><div class="container">
@@ -235,6 +278,84 @@ li{margin-bottom:8px}
 </body>
 </html>"""
 
+SAMPLE_REPORT_HTML = r"""<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Приклад звіту — МetaProfile</title>
+<meta name="description" content="Так виглядає реальний ZVіт після тестування">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.metaprofile.online/sample-report">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#fafaf7;color:#1a1a1a;line-height:1.65}
+a{color:#1a3a8f}
+header.top{padding:18px 22px;background:#fff;border-bottom:1px solid #eee}
+header.top .row{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+header.top .logo{font-weight:700;color:#111;text-decoration:none;font-size:18px}
+header.top a.back{color:#1a3a8f;text-decoration:none;font-size:14px}
+.demo-banner{background:#fff8e1;border-bottom:1px solid #ffe082;padding:10px 22px;text-align:center;font-size:14px;color:#7a5a00}
+.report{max-width:820px;margin:0 auto;padding:32px 22px 60px}
+h1{font-size:30px;margin:0 0 6px;color:#111}
+.lead{color:#555;margin:0 0 22px;font-size:15px}
+.meta-card{background:#fff;border:1px solid #e8e4d8;border-radius:12px;padding:18px 22px;margin-bottom:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.meta-card .item .lbl{color:#888;font-size:12px;text-transform:uppercase;letter-spacing:.4px;margin-bottom:2px}
+.meta-card .item .val{color:#111;font-weight:600;font-size:15px}
+.section{background:#fff;border:1px solid #e8e4d8;border-radius:12px;padding:24px 26px;margin-bottom:18px}
+.section h2{margin:0 0 12px;font-size:19px;color:#111;display:flex;align-items:center;gap:10px}
+.section h2 .num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#4a6cf7;color:#fff;border-radius:50%;font-size:14px;font-weight:700}
+.section p{margin:0 0 12px;font-size:15px;color:#333}
+.section ul{margin:8px 0 0;padding-left:22px}
+.section li{margin-bottom:6px;font-size:15px;color:#333}
+.rec-box{margin-top:12px;padding:12px 16px;background:#eef3ff;border-left:3px solid #4a6cf7;border-radius:6px;font-size:14px;color:#1a3a8f}
+.cta-final{margin-top:30px;padding:30px 26px;background:#111;color:#fff;border-radius:14px;text-align:center}
+.cta-final h3{margin:0 0 8px;font-size:22px;color:#fff}
+.cta-final p{margin:0 0 18px;font-size:15px;opacity:.85}
+.cta-final .btn{display:inline-block;padding:13px 30px;background:#fff;color:#111;text-decoration:none;border-radius:10px;font-weight:600}
+@media (max-width:640px){h1{font-size:24px}.section{padding:18px 18px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="row"><a class="logo" href="/">MetaProfile</a><a class="back" href="/">← На головну</a></div></header>
+<div class="demo-banner">📋 Так виглядає реальний ZVіт після тестування</div>
+<main class="report">
+<h1>Приклад ZVіту</h1>
+<p class="lead">Це демо-звіт на основі вигаданого кандидата. Реальні звіти мають таку ж структуру і глибину аналізу.</p>
+<div class="meta-card">
+<div class="item"><div class="lbl">Кандидат</div><div class="val">Олена К.</div></div>
+<div class="item"><div class="lbl">Позиція</div><div class="val">Менеджер з продажу</div></div>
+<div class="item"><div class="lbl">Дата тестування</div><div class="val">15.04.2026</div></div>
+<div class="item"><div class="lbl">Тривалість</div><div class="val">13 хвилин</div></div>
+</div>
+<section class="section"><h2><span class="num">1</span>Як приймає рішення</h2>
+<p>Олена приймає рішення швидко та інтуітивно. Схильна довіряти власному досвіду більше, ніж чужій думці. Це допомагає в динамічних ситуаціях, але може створювати тісні точки у командній роботі.</p>
+<div class="rec-box">Рекомендація: не тисніть довгим аналізом. Дайте контекст і очікуйте рішення протягом 1–2 годин.</div></section>
+<section class="section"><h2><span class="num">2</span>Що мотивує</h2>
+<p>Головні драйвери: визнання результатів, стабільність та чіткі правила гри. Гроши важливі, але не є головним драйвером. Конкуренція через агресію не мотивує — очікує справедливості.</p>
+<div class="rec-box">Рекомендація: покажіть чіткий кар’єрний трек і преміальні KPI. Уникати грошових провокацій на інтерв’ю.</div></section>
+<section class="section"><h2><span class="num">3</span>Як з нею працювати</h2>
+<ul>
+<li>Ставте чіткі та вимірні цілі і дедлайни</li>
+<li>Давайте ініціативу в межах процесу, але не повну свободу</li>
+<li>Регулярно давайте зворотний зв’язок — інакше втратить мотивацію</li>
+<li>В конфліктних ситуаціях дайте час на обдумування</li>
+</ul>
+</section>
+<section class="section"><h2><span class="num">4</span>Потенційні ризики</h2>
+<ul>
+<li>Може вигорати при частій зміні пріоритетів</li>
+<li>Схильна до надмірного аналізу перед дією</li>
+<li>Стресове навантаження при жорсткій критиці</li>
+</ul>
+</section>
+<section class="section"><h2><span class="num">5</span>Як давати зворотний зв’язок</h2>
+<p>Конструктивно, з конкретними прикладами. Олена хороше сприймає критику, якщо вона супроводжується конкретною рекомендацією. Уникайте загальних оцінок на кшталт „ти розумній“.</p>
+</section>
+<div class="cta-final"><h3>Протестуйте на собі чи кандидаті</h3><p>Перший тест — безкоштовно. Отримаєте такий ж звіт за 15 хвилин.</p><a class="btn" href="/register">Створити акаунт безкоштовно</a></div>
+</main>
+</body>
+</html>"""
+
 ROBOTS_TXT = (
     "User-agent: *\n"
     "Allow: /\n"
@@ -259,6 +380,7 @@ def build_sitemap_xml():
         (base + "/login", "0.5", "monthly"),
         (base + "/register", "0.7", "monthly"),
         (base + "/about-method", "0.8", "monthly"),
+        (base + "/sample-report", "0.7", "monthly"),
     ]
     parts = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -283,6 +405,10 @@ def register_seo_routes(app):
     @app.route("/about-method")
     def about_method():
         return Response(ABOUT_METHOD_HTML, mimetype="text/html")
+
+    @app.route("/sample-report")
+    def sample_report():
+        return Response(SAMPLE_REPORT_HTML, mimetype="text/html")
 
     @app.route("/sitemap.xml")
     def sitemap_xml():
