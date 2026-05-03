@@ -78,6 +78,7 @@ footer a{color:#fff;text-decoration:none}
 <p class="lead">MetaProfile — AI-платформа для психологічного тестування кандидатів та оцінки персоналу. Обʼєктивний звіт про сильні сторони, мотивацію та ризики — без багатогодинних співбесід.</p>
 <a href="/register" class="btn">Створити акаунт безкоштовно</a>
 <a href="#how" class="btn secondary">Як це працює</a>
+<p class="free-badge" style="margin-top:18px;color:#666;font-size:0.95em">🎁 Перший тест — безкоштовно. Без картки.</p>
 </div></section>
 <section id="why"><div class="container">
 <h2>Чому HR обирають MetaProfile</h2>
@@ -101,14 +102,23 @@ footer a{color:#fff;text-decoration:none}
 </div></section>
 <section id="cases"><div class="container">
 <h2>Сценарії використання</h2>
+<p style="text-align:center;color:#666;max-width:720px;margin:0 auto 24px">Як HR-менеджери, власники бізнесу та психологи використовують MetaProfile у щоденній роботі.</p>
 <div class="grid">
-<div class="card"><h3>Підбір у малий бізнес</h3><p>Власник магазину чи кавʼярні замість інтуїтивного «здається, гарна людина» отримує обʼєктивний профіль і знижує ризик хибного найму.</p></div>
-<div class="card"><h3>HR-відділи компаній</h3><p>Команда рекрутерів використовує MetaProfile як перший фільтр у воронці. На очну співбесіду доходять лише кандидати з відповідним профілем.</p></div>
-<div class="card"><h3>Психологи та коучі</h3><p>Приватні фахівці використовують сервіс для попередньої діагностики клієнтів — швидко формують гіпотези й готуються до сесії якісніше.</p></div>
+<div class="card"><h3>🛍️ Підбір менеджера з продажу</h3><p>Власник магазину перевіряє 5 кандидатів за вечір замість тижня співбесід. Отримує обʼєктивний профіль: стресостійкість, мотивація, схильність до маніпуляцій — і обирає того, хто реально витримає роботу з клієнтами.</p></div>
+<div class="card"><h3>👥 Перевірка команди перед реструктуризацією</h3><p>HR-директор IT-компанії оцінює 30 співробітників перед обʼєднанням відділів. Бачить, хто здатний бути лідером, а хто краще працює виконавцем — рішення про ролі базуються на даних, а не на інтуїції.</p></div>
+<div class="card"><h3>🧠 Скринінг ризику вигорання</h3><p>Психолог-консультант використовує MetaProfile для попередньої діагностики клієнтів. За 15 хвилин отримує гіпотези про сильні сторони та зони ризику — і готується до сесії якісніше, заощаджуючи перші 1-2 зустрічі.</p></div>
+</div>
+<h3 style="text-align:center;margin-top:48px;margin-bottom:8px">Що показує дослідження ринку</h3>
+<p style="text-align:center;color:#666;max-width:720px;margin:0 auto 24px">Глобальні дані про ефективність AI-оцінки кандидатів у HR.</p>
+<div class="grid">
+<div class="card"><h3 style="font-size:2em;color:#2563eb">−40%</h3><p><strong>часу на найм</strong> при використанні онлайн-оцінки кандидатів замість класичних співбесід <span style="color:#999">(Aberdeen Group, дослідження HR-індустрії)</span>.</p></div>
+<div class="card"><h3 style="font-size:2em;color:#2563eb">+24%</h3><p><strong>якість найму</strong> зростає, коли рішення базується на структурованій оцінці, а не на враженні рекрутера <span style="color:#999">(Harvard Business Review, мета-аналіз)</span>.</p></div>
+<div class="card"><h3 style="font-size:2em;color:#2563eb">−30%</h3><p><strong>плинність кадрів</strong> у компаній, що використовують психометричну оцінку перед наймом <span style="color:#999">(SHRM, галузеві звіти)</span>.</p></div>
 </div>
 </div></section>
 <section id="prices"><div class="container">
 <h2>Тарифи</h2>
+<p style="text-align:center;background:#fff7e6;border:1px solid #ffd591;border-radius:12px;padding:14px 20px;max-width:560px;margin:0 auto 28px;color:#874d00"><strong>🎁 Спробуйте безкоштовно:</strong> 1 тест у подарунок при реєстрації — без картки.</p>
 <div class="prices">
 <div class="price"><h3>Базовий</h3><div class="amount">99 грн</div><p>За один тест</p>
 <ul><li>Основний особистісний профіль</li><li>AI-аналіз відповідей</li><li>Звіт онлайн</li></ul>
