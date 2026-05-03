@@ -1062,7 +1062,7 @@ th{background:#f8f9fa;font-weight:bold}
 <div class="balance-card" style="padding:18px"><div style="display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:13px;opacity:0.9">Баланс</div><div style="font-size:24px;font-weight:bold">{{ balance }} грн</div></div><a href="/billing" style="color:white;font-size:13px;text-decoration:underline">Поповнити</a></div></div>
 
 <div class="card"><label>Імя кандидата:</label><input type="text" id="candidate_name" placeholder="Введіть імя..."></div>
-<div class="card"><label>Посада:</label><input type="text" id="position_select" placeholder="Введіть посаду (наприклад: Поліграфолог, Слідчий, Дизайнер...)"><p class="hint">💡 Введіть будь-яку посаду — питання згенеруються та адаптуються автоматично</p></div>
+<div class="card"><label>Посада:</label><input type="text" id="position_select" placeholder="Введіть посаду (наприклад: Поліграфолог, Слідчий, Дизайнер...)"><p class="hint">💡 Введіть будь-яку посаду — питання адаптуються під неї автоматично</p></div>
 <div class="card">
 <label>Формат тестування:</label>
 <div class="modes">
