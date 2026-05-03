@@ -86,7 +86,7 @@ footer a{color:#fff;text-decoration:none}
 .disclaimer-card{max-width:760px;margin:0 auto;display:flex;gap:16px;align-items:flex-start;padding:18px 22px;background:#f4f6fb;border-left:3px solid #4a6cf7;border-radius:8px}
 .disclaimer-card .disc-icon{font-size:20px;line-height:1;flex-shrink:0;margin-top:2px}
 .disclaimer-card p{margin:0;font-size:14px;color:#3a4456;line-height:1.6}
-@media (max-width:640px){#report-what{padding:40px 0}.report-grid{grid-template-columns:1fr}}
+@media (max-width:640px){ #report-what{padding:40px 0}.report-grid{grid-template-columns:1fr}}
 
 .card.popular{position:relative;border:2px solid #4a6cf7;transform:scale(1.03)}
 .card.popular .popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#4a6cf7;color:#fff;padding:4px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
