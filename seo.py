@@ -85,7 +85,6 @@ footer a{color:#fff;text-decoration:none}
 </nav>
 </div></header>
 <section class="hero"><div class="container">
-<span class="tagline">AI-аналіз за 15 хвилин</span>
 <h1>Психологічний профіль кандидата<br>онлайн за 15 хвилин</h1>
 <p class="lead">MetaProfile — AI-платформа для психологічного тестування кандидатів та оцінки персоналу. Обʼєктивний звіт про сильні сторони, мотивацію та ризики — без багатогодинних співбесід.</p>
 <a href="/register" class="btn">Створити акаунт безкоштовно</a>
