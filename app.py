@@ -329,7 +329,6 @@ input,select,textarea{width:100%;padding:12px;border:2px solid #ddd;border-radiu
 <div id="result"></div>
 <div id="download_buttons" style="display:none;margin-top:15px;display:none">
 <div class="card" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center" id="dl_card">
-<button class="nav-btn" onclick="downloadTxt()" style="background:#27ae60">📄 Завантажити TXT</button>
 <button class="nav-btn" onclick="downloadPdf()" style="background:#e74c3c">📕 Завантажити PDF</button>
 <button class="nav-btn" onclick="copyResult()" style="background:#9b59b6">📋 Копіювати</button>
 <button class="nav-btn" onclick="newTest()" style="background:#34495e">🔄 Новий тест</button>
