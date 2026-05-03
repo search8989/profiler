@@ -92,6 +92,13 @@ footer a{color:#fff;text-decoration:none}
 .price.featured .popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#4a6cf7;color:#fff;padding:4px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
 @media (max-width:760px){.price.featured{transform:none}}
 
+
+.limits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
+.limit-card{background:#fff5f0;border:1px solid #ffd9c4;border-radius:12px;padding:20px 22px}
+.limit-card h3{margin:0 0 8px;font-size:16px;color:#7a3a1a}
+.limit-card h3:before{content:"— ";color:#c97a4a;font-weight:700}
+.limit-card p{margin:0;font-size:14px;color:#5a4a3a;line-height:1.55}
+.report-note{margin:20px auto 0;max-width:760px;text-align:center;color:#666;font-size:14px;font-style:italic}
 </style>
 </head>
 <body>
@@ -107,8 +114,8 @@ footer a{color:#fff;text-decoration:none}
 </nav>
 </div></header>
 <section class="hero"><div class="container">
-<h1>Зрозумійте, як працювати<br>з кандидатом — ще до найму</h1>
-<p class="lead">Структурований звіт на основі відповідей кандидата: як він приймає рішення, що його мотивує, як давати задачі і де можуть бути ризики.</p>
+<h1>Не звіт про кандидата —<br>інструкція для його керівника</h1>
+<p class="lead">Як ставити задачі, давати фідбек, мотивувати та вводити в роль — ще до першого робочого дня. 5 готових скриптів керування на основі 15-хвилинного тесту.</p>
 <a href="/register" class="btn">Створити акаунт безкоштовно</a>
 <a href="#how" class="btn secondary">Як це працює</a>
 <p class="hero-extra-link"><a href="/sample-report">Подивитись приклад звіту →</a></p>
@@ -117,16 +124,16 @@ footer a{color:#fff;text-decoration:none}
 </div></section>
 
 <section id="report-what"><div class="container">
-<h2>Що ви отримаєте у звіті</h2>
-<p class="section-sub">Не „тест з оцінкою“, а практичні підказки для роботи з людиною.</p>
+<h2>5 готових скриптів для керівника</h2>
+<p class="section-sub">Не дані про кандидата, а конкретні дії: що робити першого дня, як говорити, чого уникати.</p>
 <div class="report-grid">
-<div class="report-card"><div class="rc-icon">🧭</div><h3>Як людина приймає рішення</h3><p>Швидко чи обережно. Самостійно чи чекає підтвердження. Як реагує на тиск і дедлайни.</p></div>
-<div class="report-card"><div class="rc-icon">⚡</div><h3>Що її мотивує</h3><p>Гроші, визнання, стабільність чи нові виклики. Шо триматиме на итривалому горизонті.</p></div>
-<div class="report-card"><div class="rc-icon">💬</div><h3>Як з нею працювати</h3><p>Стиль комунікації, формат задач, тип контролю. Як говорити зокрема з цією людиною.</p></div>
-<div class="report-card"><div class="rc-icon">⚠️</div><h3>Потенційні ризики</h3><p>Де може бути розчарування. Що варто перевірити на співбесіді чи в іспитному терміні.</p></div>
-<div class="report-card"><div class="rc-icon">🔄</div><h3>Як давати зворотний зв’язок</h3><p>Як хвалити і як критикувати, щоби людина почула — і хотіла змінюватись.</p></div>
+<div class="report-card"><div class="rc-icon">🎯</div><h3>Ставте задачі правильно</h3><p>Комусь треба дедлайн і чеклист, іншому — свободу і «велику картину». Дізнаєтесь, який формат робочий для цього кандидата.</p></div>
+<div class="report-card"><div class="rc-icon">💬</div><h3>Давайте фідбек, який працює</h3><p>Одних людей мотивує публічне визнання, інших воно паралізує. Отримаєте формат, час і тон фідбеку для цієї людини.</p></div>
+<div class="report-card"><div class="rc-icon">⚡</div><h3>Мотивуйте без зайвих витрат</h3><p>Гроші не всім є головним драйвером. Комусь важливий статус, комусь — стабільність. Дізнаєтесь, що власне триматиме цю людину в компанії.</p></div>
+<div class="report-card"><div class="rc-icon">🛡️</div><h3>Уникайте конфліктів</h3><p>Передбачте ситуації, в яких людина вигорить або втратить мотивацію. Отримаєте червоні прапорці для вашої команди.</p></div>
+<div class="report-card"><div class="rc-icon">🚀</div><h3>Введіть в роль за 90 днів</h3><p>Конкретний план по тижнях і місяцях: що дати одразу, що — через місяць, що — через три. Як перевести на повний KPI.</p></div>
 </div>
-<div class="report-cta"><a href="/sample-report" class="btn-ghost">Подивитись приклад звіту</a></div>
+<p class="report-note">Плюс — питання для перевірки на інтерв’ю і чесний блок «як читати цей звіт правильно» — межі методу без води.</p>
 </div></section>
 <section id="why"><div class="container">
 <h2>Чому HR обирають MetaProfile</h2>
@@ -193,6 +200,16 @@ footer a{color:#fff;text-decoration:none}
 <h2>Чому з одними людьми легко, а з іншими важко?</h2>
 <p>Один і той ж факт люди сприймають по-різному. Це не характер — це метапрограми мислення. В статті за 5 хвилин розберемось, чому так.</p>
 <a href="/about-method" class="btn">Читати статтю →</a>
+</div>
+</div></section>
+
+<section id="limits"><div class="container" style="max-width:920px">
+<h2>Чого MetaProfile не робить</h2>
+<p class="section-sub">Чесні межі методу. Чим краще ви їх розумієте — тим кориснішим буде звіт.</p>
+<div class="limits-grid">
+<div class="limit-card"><h3>Не оцінюємо професійні навички</h3><p>Програміст без Python залишиться програмістом без Python. Для hard skills використовуйте технічні інтерв’ю та тестові завдання.</p></div>
+<div class="limit-card"><h3>Не діагноз, а карта зони комфорту</h3><p>Показуємо, як людині звично діяти в нормальних умовах. Під стресом або в новому оточенні патерни тимчасово зміщуються.</p></div>
+<div class="limit-card"><h3>Не замінює інтерв’ю</h3><p>Ми даємо гіпотези і готові питання для перевірки на інтерв’ю. Фінальне рішення — завжди за керівником.</p></div>
 </div>
 </div></section>
 <section id="faq"><div class="container" style="max-width:820px">
