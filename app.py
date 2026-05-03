@@ -1215,7 +1215,7 @@ async function startQuiz(){
   }
   document.getElementById("setup").style.display="none";
   document.getElementById("loading").style.display="block";
-  document.getElementById("loading").textContent="🤖 Готую питання адаптовані під «"+pos+"»...";
+  document.getElementById("loading").textContent="🤖 Завантажую запитання...";
   try{
     const r=await fetch("/generate_questions",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({position:pos,mode:currentMode})});
     const d=await r.json();
