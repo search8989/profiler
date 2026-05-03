@@ -73,30 +73,6 @@ def load_user(user_id):
 with app.app_context():
     db.create_all()
 
-POSITIONS = [
-    "Няня", "Гувернантка", "Репетитор", "Вчитель", "Вихователь",
-    "Охоронець", "Сторож", "Поліцейський", "Військовослужбовець",
-    "Менеджер", "Керівник проєкту", "Директор", "Топ-менеджер",
-    "Бухгалтер", "Аудитор", "Фінансовий аналітик", "Економіст",
-    "Продавець", "Касир", "Менеджер з продажів", "Торговий представник",
-    "Водій", "Таксист", "Кур'єр", "Логіст",
-    "Адміністратор", "Офіс-менеджер", "Секретар", "Ресепшеніст",
-    "Програміст", "Системний адміністратор", "Тестувальник", "Дизайнер",
-    "Маркетолог", "SMM-менеджер", "Копірайтер", "PR-менеджер",
-    "HR-менеджер", "Рекрутер", "Психолог", "Коуч",
-    "Лікар", "Медсестра", "Фармацевт", "Стоматолог",
-    "Юрист", "Адвокат", "Нотаріус",
-    "Кухар", "Офіціант", "Бариста", "Бармен", "Кондитер",
-    "Перукар", "Майстер манікюру", "Косметолог", "Масажист",
-    "Будівельник", "Електрик", "Сантехнік", "Зварювальник",
-    "Інженер", "Технолог", "Конструктор",
-    "Журналіст", "Фотограф", "Відеограф", "Монтажер",
-    "Тренер з фітнесу", "Інструктор з йоги", "Спортивний тренер",
-    "Сомельє", "Шеф-кухар", "Адміністратор готелю",
-    "Швачка", "Прибиральниця", "Доглядальниця",
-    "Інше"
-]
-
 QUESTIONS_FALLBACK = {
     "fast": [
         "Розкажіть про себе і чому ви обрали цю професію?",
@@ -343,7 +319,7 @@ def test_page():
     if current_user.balance < min_price:
         flash(f'Недостатньо коштів для проведення тесту. Мінімум {min_price} грн. Поповніть баланс.', 'error')
         return redirect(url_for('billing'))
-    return render_template_string(TEST_HTML, positions=POSITIONS, questions_json=json.dumps(QUESTIONS_FALLBACK, ensure_ascii=False), prices=PRICES, balance=current_user.balance)
+    return render_template_string(TEST_HTML, questions_json=json.dumps(QUESTIONS_FALLBACK, ensure_ascii=False), prices=PRICES, balance=current_user.balance)
 
 @app.route('/history')
 @login_required
@@ -1086,7 +1062,7 @@ th{background:#f8f9fa;font-weight:bold}
 <div class="balance-card" style="padding:18px"><div style="display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:13px;opacity:0.9">Баланс</div><div style="font-size:24px;font-weight:bold">{{ balance }} грн</div></div><a href="/billing" style="color:white;font-size:13px;text-decoration:underline">Поповнити</a></div></div>
 
 <div class="card"><label>Імя кандидата:</label><input type="text" id="candidate_name" placeholder="Введіть імя..."></div>
-<div class="card"><label>Посада:</label><input type="text" id="position_select" list="positions_list" placeholder="Введіть або оберіть посаду"><datalist id="positions_list">{% for p in positions %}<option value="{{p}}">{% endfor %}</datalist><p class="hint">💡 Можна ввести будь-яку посаду — питання адаптуються</p></div>
+<div class="card"><label>Посада:</label><input type="text" id="position_select" placeholder="Введіть посаду (наприклад: Поліграфолог, Слідчий, Дизайнер...)"><p class="hint">💡 Введіть будь-яку посаду — питання згенеруються та адаптуються автоматично</p></div>
 <div class="card">
 <label>Формат тестування:</label>
 <div class="modes">
