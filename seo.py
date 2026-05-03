@@ -88,9 +88,9 @@ footer a{color:#fff;text-decoration:none}
 .disclaimer-card p{margin:0;font-size:14px;color:#3a4456;line-height:1.6}
 @media (max-width:640px){ #report-what{padding:40px 0}.report-grid{grid-template-columns:1fr}}
 
-.card.popular{position:relative;border:2px solid #4a6cf7;transform:scale(1.03)}
-.card.popular .popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#4a6cf7;color:#fff;padding:4px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
-@media (max-width:760px){.card.popular{transform:none}}
+.price.featured{position:relative;border:2px solid #4a6cf7;transform:scale(1.03)}
+.price.featured .popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#4a6cf7;color:#fff;padding:4px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+@media (max-width:760px){.price.featured{transform:none}}
 
 </style>
 </head>
@@ -161,7 +161,7 @@ footer a{color:#fff;text-decoration:none}
 <div class="grid">
 <div class="card"><h3 style="font-size:2em;color:#2563eb">−40%</h3><p><strong>часу на найм</strong> при використанні онлайн-оцінки кандидатів замість класичних співбесід <span style="color:#999">(Aberdeen Group, дослідження HR-індустрії)</span>.</p></div>
 <div class="card"><h3 style="font-size:2em;color:#2563eb">+24%</h3><p><strong>якість найму</strong> зростає, коли рішення базується на структурованій оцінці, а не на враженні рекрутера <span style="color:#999">(Harvard Business Review, мета-аналіз)</span>.</p></div>
-<div class="card popular"><div class="popular-badge">Найпопулярніше</div><h3 style="font-size:2em;color:#2563eb">−30%</h3><p><strong>плинність кадрів</strong> у компаній, що використовують психометричну оцінку перед наймом <span style="color:#999">(SHRM, галузеві звіти)</span>.</p></div>
+<div class="card"><h3 style="font-size:2em;color:#2563eb">−30%</h3><p><strong>плинність кадрів</strong> у компаній, що використовують психометричну оцінку перед наймом <span style="color:#999">(SHRM, галузеві звіти)</span>.</p></div>
 </div>
 </div></section>
 
@@ -178,7 +178,7 @@ footer a{color:#fff;text-decoration:none}
 <div class="price"><h3>Базовий</h3><div class="amount">99 грн</div><p>За один тест</p>
 <ul><li>Основний особистісний профіль</li><li>AI-аналіз відповідей</li><li>Звіт онлайн</li></ul>
 <a href="/register" class="btn">Почати</a></div>
-<div class="price featured"><h3>Розширений</h3><div class="amount">249 грн</div><p>За один тест</p>
+<div class="price featured"><div class="popular-badge">Найпопулярніше</div><h3>Розширений</h3><div class="amount">249 грн</div><p>За один тест</p>
 <ul><li>Все з Базового</li><li>Сильні сторони та ризики</li><li>Розширений звіт</li><li>Рекомендації для посади</li></ul>
 <a href="/register" class="btn">Почати</a></div>
 <div class="price"><h3>Повний</h3><div class="amount">499 грн</div><p>За один тест</p>
