@@ -58,17 +58,17 @@ footer{background:#111;color:#aaa;padding:36px 0;margin-top:40px;font-size:14px}
 footer a{color:#fff;text-decoration:none}
 .tagline{display:inline-block;background:#fff3cd;color:#664d03;padding:5px 12px;border-radius:20px;font-size:13px;margin-bottom:16px;font-weight:600}
 @media(max-width:640px){.hero h1{font-size:30px}.hero p.lead{font-size:16px}section{padding:44px 0}section h2{font-size:24px}}
-.hero-extra-link{margin-top:14px;font-size:14px;opacity:.85}
-.hero-extra-link a{color:#9fb3ff;text-decoration:none;border-bottom:1px dashed #5a6dc4}
-.hero-extra-link a:hover{color:#fff;border-color:#fff}
-.article-promo{padding:50px 0;background:linear-gradient(135deg,#1a2540 0%,#0f1a30 100%)}
-.article-promo .promo-card{max-width:760px;margin:0 auto;padding:36px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:16px;text-align:center}
-.article-promo .promo-badge{display:inline-block;font-size:36px;margin-bottom:8px}
-.article-promo h2{margin:8px 0 14px;font-size:24px;line-height:1.35}
-.article-promo p{margin:0 0 22px;font-size:16px;opacity:.85;line-height:1.6}
-.article-promo .btn{display:inline-block;padding:12px 28px;background:#4a6cf7;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;transition:background .2s}
-.article-promo .btn:hover{background:#5a7cff}
-@media (max-width:640px){.article-promo{padding:32px 0}.article-promo .promo-card{padding:24px 18px}.article-promo h2{font-size:20px}}
+.hero-extra-link{margin-top:18px;font-size:15px}
+.hero-extra-link a{color:#1a3a8f;text-decoration:none;border-bottom:1px solid rgba(26,58,143,.35);padding-bottom:1px;font-weight:500}
+.hero-extra-link a:hover{color:#0b1f5c;border-color:#0b1f5c}
+.article-promo{padding:56px 0;background:#f7f5f0}
+.article-promo .promo-card{max-width:760px;margin:0 auto;padding:36px 32px;background:#fff;border:1px solid #e6e2d8;border-radius:16px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+.article-promo .promo-badge{display:inline-block;font-size:34px;margin-bottom:6px;line-height:1}
+.article-promo h2{margin:6px 0 14px;font-size:24px;line-height:1.35;color:#1a1a1a}
+.article-promo p{margin:0 0 22px;font-size:16px;color:#4a4a4a;line-height:1.6}
+.article-promo .btn{display:inline-block;padding:13px 30px;background:#111;color:#fff;border-radius:10px;text-decoration:none;font-weight:600;transition:transform .15s,background .2s}
+.article-promo .btn:hover{background:#000;transform:translateY(-1px)}
+@media (max-width:640px){.article-promo{padding:36px 0}.article-promo .promo-card{padding:26px 20px}.article-promo h2{font-size:20px}}
 
 </style>
 </head>
