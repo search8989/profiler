@@ -327,6 +327,14 @@ input,select,textarea{width:100%;padding:12px;border:2px solid #ddd;border-radiu
 </div>
 <div id="loading">⏳ Аналізую відповіді... зачекайте 20-40 секунд</div>
 <div id="result"></div>
+<div id="download_buttons" style="display:none;margin-top:15px;display:none">
+<div class="card" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center" id="dl_card">
+<button class="nav-btn" onclick="downloadTxt()" style="background:#27ae60">📄 Завантажити TXT</button>
+<button class="nav-btn" onclick="downloadPdf()" style="background:#e74c3c">📕 Завантажити PDF</button>
+<button class="nav-btn" onclick="copyResult()" style="background:#9b59b6">📋 Копіювати</button>
+<button class="nav-btn" onclick="newTest()" style="background:#34495e">🔄 Новий тест</button>
+</div>
+</div>
 </div>
 <script>
 const QUESTIONS = {{ questions_json|safe }};
@@ -452,10 +460,60 @@ async function doAnalyze(){
     document.getElementById("loading").style.display="none";
     document.getElementById("result").style.display="block";
     document.getElementById("result").textContent=d.result||"Помилка: "+d.error;
+    if(d.result){_resultText=d.result;_candidateName=name;_candidatePos=pos;document.getElementById("download_buttons").style.display="block";document.getElementById("dl_card").style.display="flex";}
   }catch(e){
     document.getElementById("loading").style.display="none";
     document.getElementById("result").style.display="block";
     document.getElementById("result").textContent="Помилка: "+e.message;
+  }
+}
+
+let _resultText = "";
+let _candidateName = "";
+let _candidatePos = "";
+
+function downloadTxt(){
+  const fname = "Профайл_" + (_candidateName || "кандидат") + "_" + new Date().toISOString().slice(0,10) + ".txt";
+  const header = "МЕТАПРОГРАМНИЙ ПРОФІЛЬ КАНДИДАТА\n" +
+                 "Кандидат: " + _candidateName + "\n" +
+                 "Посада: " + _candidatePos + "\n" +
+                 "Дата: " + new Date().toLocaleDateString("uk-UA") + "\n" +
+                 "================================\n\n";
+  const blob = new Blob([header + _resultText], {type: "text/plain;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = fname; a.click();
+  URL.revokeObjectURL(url);
+}
+
+function downloadPdf(){
+  const w = window.open("", "_blank");
+  const html = "<html><head><meta charset='UTF-8'><title>Профайл " + _candidateName + "</title>" +
+    "<style>body{font-family:Georgia,serif;max-width:800px;margin:30px auto;padding:20px;line-height:1.7;color:#222}" +
+    "h1{color:#2c3e50;border-bottom:3px solid #2c3e50;padding-bottom:10px}" +
+    ".meta{background:#f8f9fa;padding:15px;border-radius:8px;margin-bottom:25px}" +
+    ".content{white-space:pre-wrap;font-size:14px}" +
+    "@media print{body{margin:0}}" +
+    "</style></head><body>" +
+    "<h1>Метапрограмний профіль кандидата</h1>" +
+    "<div class='meta'><strong>Кандидат:</strong> " + _candidateName + "<br>" +
+    "<strong>Посада:</strong> " + _candidatePos + "<br>" +
+    "<strong>Дата:</strong> " + new Date().toLocaleDateString("uk-UA") + "</div>" +
+    "<div class='content'>" + _resultText.replace(/</g,"&lt;") + "</div>" +
+    "<script>setTimeout(()=>window.print(),500)<\/script></body></html>";
+  w.document.write(html);
+  w.document.close();
+}
+
+function copyResult(){
+  navigator.clipboard.writeText(_resultText).then(()=>{
+    alert("Скопійовано в буфер обміну!");
+  });
+}
+
+function newTest(){
+  if(confirm("Розпочати новий тест? Поточний звіт буде закритий.")){
+    location.reload();
   }
 }
 </script>
